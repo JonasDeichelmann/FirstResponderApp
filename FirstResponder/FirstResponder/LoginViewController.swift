@@ -13,8 +13,8 @@ import Alamofire
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var userField:UITextField?
-    @IBOutlet weak var passField:UITextField?
+    @IBOutlet weak var userField:UITextField!
+    @IBOutlet weak var passField:UITextField!
     
 
     override func viewDidLoad() {
@@ -23,7 +23,24 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func login() {
-        
+        if userField.text != nil && passField.text != nil {
+            
+            let requestURL = "http://174.129.62.164/api/register"
+            let APIKey = "03afc455-5170-42af-b83e-6b65358c0bea"
+            let user = userField.text!
+            let pass = passField.text!
+            let JSON:[String: Any] = [
+                "key": APIKey,
+                "userdata": [
+                    "name" : user,
+                    "pass" : pass
+                ]
+            ]
+            
+            Alamofire.request(requestURL, method: HTTPMethod.post, parameters: JSON, encoding: JSONEncoding.default, headers: nil).response { response in
+                    print(response)
+            }
+        }
     }
 
 }

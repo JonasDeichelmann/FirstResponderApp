@@ -7,8 +7,9 @@
 //
 
 import UIKit
-import TB
 import Alamofire
+import SwiftyJSON
+import TB
 
 class RegisterUserViewController: UIViewController {
     
@@ -21,22 +22,40 @@ class RegisterUserViewController: UIViewController {
     }
 
     @IBAction func register(){
-        if let user = userField.text {
+        if userField.text != nil && emailField.text != nil && passField.text != nil {
+            let user = userField.text!
             if !user.isUserName {
                 return
             }
-        }
-        if let email = emailField.text {
+            let email = emailField.text!
             if !email.isEmail {
                 return
             }
-        }
-        if let password = passField.text {
-            if password.length < 8 {
+            
+            let pass = passField.text!
+            if pass.length < 8 {
                 return
             }
+            
+            let requestURL = "http://174.129.62.164/api/register"
+            let APIKey = "03afc455-5170-42af-b83e-6b65358c0bea"
+            let JSONBody:[String: Any] = [
+                "key":APIKey,
+                "userdata":[
+                    "name":user,
+                    "email":email,
+                    "password":pass
+                ]
+            ];
+            TB.info("sending request")
+            Alamofire.request(requestURL, method: HTTPMethod.post, parameters: JSONBody, encoding: JSONEncoding.default, headers: nil).validate().response { response in
+                print(response)
+            }
+            TB.info("Sent Request")
+            // ip/api/register
+            
+            
         }
-        
         
         // TODO: Pass data to server
     }
