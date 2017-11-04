@@ -1,0 +1,6 @@
+framework module TB {
+  umbrella header "TB-umbrella.h"
+
+  export *
+  module * { export * }
+}

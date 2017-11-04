@@ -6,5 +6,6 @@ target 'FirstResponder' do
   use_frameworks!
 
   # Pods for FirstResponder
+pod 'TB', :git => 'https://github.com/JonasDeichelmann/ToolBox.git'
 
 end
