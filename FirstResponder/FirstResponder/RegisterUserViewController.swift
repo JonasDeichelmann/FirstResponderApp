@@ -36,20 +36,25 @@ class RegisterUserViewController: UIViewController {
             if pass.length < 8 {
                 return
             }
-            
-            let requestURL = "http://174.129.62.164/api/register"
-            let APIKey = "03afc455-5170-42af-b83e-6b65358c0bea"
             let JSONBody:[String: Any] = [
-                "key":APIKey,
+                "key" : "03afc455-5170-42af-b83e-6b65358c0bea",
                 "userdata":[
                     "name":user,
                     "email":email,
                     "password":pass
                 ]
-            ];
+            ]
             TB.info("sending request")
-            Alamofire.request(requestURL, method: HTTPMethod.post, parameters: JSONBody, encoding: JSONEncoding.default, headers: nil).validate().response { response in
+            
+            Alamofire.request("http://174.129.62.164/api/smile/", method: .post, parameters: JSONBody).responseString { response in
                 print(response)
+                let success = (response.result.value! == ":)")
+                if success {
+                    DispatchQueue.main.async {
+                        
+                        //present(, animated: true, completion: nil)
+                    }
+                }
             }
             TB.info("Sent Request")
             // ip/api/register

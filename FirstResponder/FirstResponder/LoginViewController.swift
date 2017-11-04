@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
     @IBAction func login() {
         if userField.text != nil && passField.text != nil {
             
-            let requestURL = "http://174.129.62.164/api/register"
+            let requestURL = "http://174.129.62.164/api/login"
             let APIKey = "03afc455-5170-42af-b83e-6b65358c0bea"
             let user = userField.text!
             let pass = passField.text!

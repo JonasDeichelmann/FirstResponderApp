@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a7o-Ca-hpE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0dg-dL-Lgw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -30,7 +30,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
-                                    <segue destination="a7o-Ca-hpE" kind="show" id="OxS-UD-msu"/>
+                                    <segue destination="a7o-Ca-hpE" kind="show" identifier="register" id="OxS-UD-msu"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W6l-jj-MgS">
@@ -54,6 +54,7 @@
                     <connections>
                         <outlet property="passField" destination="W6l-jj-MgS" id="9bI-jY-7cQ"/>
                         <outlet property="userField" destination="X8Q-hj-Ivm" id="FB0-MQ-oYO"/>
+                        <segue destination="3IE-2a-XiJ" kind="show" identifier="login" id="eVZ-Tp-CYO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kiZ-Xn-rk4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -102,7 +103,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
-                                    <segue destination="0dg-dL-Lgw" kind="show" id="CPS-5o-Q3O"/>
+                                    <segue destination="0dg-dL-Lgw" kind="show" identifier="cancel" id="CPS-5o-Q3O"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -113,6 +114,7 @@
                         <outlet property="emailField" destination="n5N-Ky-4yY" id="peM-Mx-cU9"/>
                         <outlet property="passField" destination="LVW-pe-G6B" id="GiD-Eq-gu3"/>
                         <outlet property="userField" destination="wkU-r5-Vlx" id="S0W-k2-6jV"/>
+                        <segue destination="3IE-2a-XiJ" kind="show" identifier="success" id="AM8-UQ-HHq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ocn-EX-Q0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -128,4 +130,7 @@
             <point key="canvasLocation" x="-42" y="-201"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="AM8-UQ-HHq"/>
+    </inferredMetricsTieBreakers>
 </document>
