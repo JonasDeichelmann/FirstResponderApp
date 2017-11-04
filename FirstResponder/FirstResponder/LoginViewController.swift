@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func login() {
-        
+        //HEJ
     }
 
 }
