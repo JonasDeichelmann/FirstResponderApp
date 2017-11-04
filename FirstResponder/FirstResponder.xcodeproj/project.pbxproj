@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18F59A841FAE23A200E9AE8D /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F59A831FAE23A200E9AE8D /* RegisterUserViewController.swift */; };
+		18F59A861FAE2A1C00E9AE8D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F59A851FAE2A1C00E9AE8D /* Extensions.swift */; };
 		93999EE1D86AD23C920A64E1 /* Pods_FirstResponder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0022B1455087207312BE55D1 /* Pods_FirstResponder.framework */; };
 		DD746FCC1FAD79DA00AF07BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD746FCB1FAD79DA00AF07BE /* AppDelegate.swift */; };
 		DD746FCE1FAD79DA00AF07BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD746FCD1FAD79DA00AF07BE /* ViewController.swift */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		0022B1455087207312BE55D1 /* Pods_FirstResponder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstResponder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18F59A831FAE23A200E9AE8D /* RegisterUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewController.swift; sourceTree = "<group>"; };
+		18F59A851FAE2A1C00E9AE8D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4A6D5FE2389EE369FAA3803C /* Pods-FirstResponder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstResponder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirstResponder/Pods-FirstResponder.debug.xcconfig"; sourceTree = "<group>"; };
 		DD746FC81FAD79DA00AF07BE /* FirstResponder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstResponder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD746FCB1FAD79DA00AF07BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 				DD746FD21FAD79DA00AF07BE /* Assets.xcassets */,
 				DD746FD41FAD79DA00AF07BE /* LaunchScreen.storyboard */,
 				DD746FD71FAD79DA00AF07BE /* Info.plist */,
+				18F59A831FAE23A200E9AE8D /* RegisterUserViewController.swift */,
+				18F59A851FAE2A1C00E9AE8D /* Extensions.swift */,
 			);
 			path = FirstResponder;
 			sourceTree = "<group>";
@@ -210,10 +216,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FirstResponder/Pods-FirstResponder-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/TB/TB.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TB.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,6 +236,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18F59A861FAE2A1C00E9AE8D /* Extensions.swift in Sources */,
+				18F59A841FAE23A200E9AE8D /* RegisterUserViewController.swift in Sources */,
 				DD746FE21FAD84CB00AF07BE /* LoginViewController.swift in Sources */,
 				DD746FCE1FAD79DA00AF07BE /* ViewController.swift in Sources */,
 				DD746FCC1FAD79DA00AF07BE /* AppDelegate.swift in Sources */,
@@ -369,7 +379,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6XRGVQSWRU;
+				DEVELOPMENT_TEAM = FKG44PNF2G;
 				INFOPLIST_FILE = FirstResponder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.csumb.FirstResponder;
@@ -385,7 +395,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6XRGVQSWRU;
+				DEVELOPMENT_TEAM = FKG44PNF2G;
 				INFOPLIST_FILE = FirstResponder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.csumb.FirstResponder;
