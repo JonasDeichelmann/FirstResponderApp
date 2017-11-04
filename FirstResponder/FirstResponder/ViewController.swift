@@ -13,13 +13,13 @@ import TB
 import Alamofire
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
-
+    
     @IBOutlet weak var longtitude: UILabel!
     @IBOutlet weak var latitude: UILabel!
     @IBOutlet weak var locationButton: UIButton!
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -27,16 +27,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         var helloWorldTimer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(ViewController.location(_:)), userInfo: nil, repeats: true)
-
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     override func viewDidAppear(_ animated: Bool) {
     }
-
+    
     @IBAction func location(_ sender: Any) {
         locationManager.startUpdatingLocation()
         let loc = locationManager.location
@@ -52,13 +52,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 "Longtituge": long,
             ],
             "currentDate" : String(describing: Date())
-            ]
+        ]
         TB.temp("\(parameters)")
         Alamofire.request("http://174.129.62.164/api/smile/", method: .post, parameters: parameters)
             .responseString { response in
                 print(response)
         }
-
+        
     }
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
@@ -68,10 +68,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             break
         case .authorizedWhenInUse:
             TB.info("If authorized when in use")
-//            locationManager.startUpdatingLocation()
-//            let loc = locationManager.location
-//            let lat = (loc?.coordinate.latitude)!
-//            let long = (loc?.coordinate.longitude)!
+            //            locationManager.startUpdatingLocation()
+            //            let loc = locationManager.location
+            //            let lat = (loc?.coordinate.latitude)!
+            //            let long = (loc?.coordinate.longitude)!
             break
         case .authorizedAlways:
             TB.info("If always authorized")
@@ -84,6 +84,5 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             break
         }
     }
-
+    
 }
-
