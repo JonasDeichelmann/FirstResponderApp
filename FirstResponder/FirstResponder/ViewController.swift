@@ -44,14 +44,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let long = (loc?.coordinate.longitude)!
         latitude.text = String(lat)
         longtitude.text = String(long)
-        let parameters: [String: AnyObject] = [
-            "key" : "03afc455-5170-42af-b83e-6b65358c0bea" as AnyObject,
-            "userID" : 1 as AnyObject,
+        let parameters: [String: Any] = [
+            "key" : "03afc455-5170-42af-b83e-6b65358c0bea",
+            "userID" : 1,
             "coordination":[
                 "Latitude" : lat,
                 "Longtituge": long,
             ] as AnyObject,
-            "currentDate" : String(describing: Date()) as AnyObject
+            "currentDate" : String(describing: Date())
         ]
 
         Alamofire.request("http://174.129.62.164/api/update/", method: .post, parameters: parameters)
