@@ -4,8 +4,8 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <development version="8000" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,6 +13,10 @@
         <scene sceneID="2gO-sK-FvZ">
             <objects>
                 <viewController id="0dg-dL-Lgw" customClass="ViewController" customModule="FirstResponder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Me0-JS-IOQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="u0Y-Zf-BUD"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="e7X-Yu-zUk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,7 +45,6 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="2BL-gE-CVd"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="QLg-oj-uqa"/>
                     <navigationItem key="navigationItem" id="jEG-at-7QW"/>
