@@ -4,8 +4,8 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <development version="8000" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -45,6 +45,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="khJ-yU-GFJ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="QLg-oj-uqa"/>
                     <navigationItem key="navigationItem" id="jEG-at-7QW"/>
@@ -61,7 +62,7 @@
         <!--Item-->
         <scene sceneID="wDV-ym-BXZ">
             <objects>
-                <tableViewController id="EOx-1x-FMV" sceneMemberID="viewController">
+                <tableViewController id="EOx-1x-FMV" customClass="callViewController" customModule="FirstResponder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="smk-V0-opL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -85,7 +86,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvf-cb-BJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1985" y="691"/>
+            <point key="canvasLocation" x="2006" y="751"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZLR-vV-NvI">
@@ -112,6 +113,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="7Xn-jn-WTb"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EYO-kA-gza">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

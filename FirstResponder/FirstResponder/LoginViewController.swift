@@ -12,10 +12,8 @@ import TB
 import Alamofire
 
 class LoginViewController: UIViewController {
-
     @IBOutlet weak var userField:UITextField?
     @IBOutlet weak var passField:UITextField?
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
