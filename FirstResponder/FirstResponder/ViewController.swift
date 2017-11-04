@@ -26,7 +26,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
-        print(Date())
+        var helloWorldTimer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(ViewController.location(_:)), userInfo: nil, repeats: true)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +35,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
     override func viewDidAppear(_ animated: Bool) {
-
     }
 
     @IBAction func location(_ sender: Any) {
@@ -50,11 +50,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             "coordination":[
                 "Latitude" : lat,
                 "Longtituge": long,
-            ] as AnyObject,
+            ],
             "currentDate" : String(describing: Date())
-        ]
-
-        Alamofire.request("http://174.129.62.164/api/update/", method: .post, parameters: parameters)
+            ]
+        TB.temp("\(parameters)")
+        Alamofire.request("http://174.129.62.164/api/smile/", method: .post, parameters: parameters)
             .responseString { response in
                 print(response)
         }
