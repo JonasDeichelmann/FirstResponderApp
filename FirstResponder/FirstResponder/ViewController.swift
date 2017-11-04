@@ -31,6 +31,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    override func viewDidAppear(_ animated: Bool) {
+
+    }
 
     @IBAction func location(_ sender: Any) {
         locationManager.startUpdatingLocation()
