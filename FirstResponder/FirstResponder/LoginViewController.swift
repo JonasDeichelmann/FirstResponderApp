@@ -9,19 +9,21 @@
 import Foundation
 import UIKit
 import TB
+import Alamofire
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var userField:UITextField?
+    @IBOutlet weak var passField:UITextField?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-
+        hideKeyboardWhenTappedAround()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func login() {
+        
     }
 
 }
