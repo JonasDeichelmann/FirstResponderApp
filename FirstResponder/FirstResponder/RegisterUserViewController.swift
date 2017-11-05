@@ -20,6 +20,7 @@ class RegisterUserViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
     }
     
     @IBAction func register(){
@@ -37,7 +38,7 @@ class RegisterUserViewController: UIViewController {
             if pass.characters.count < 8 {
                 return
             }
-            let token = "testtoken123123"
+            let token = Singelton.shared.TokenID
             let parameters: [String: Any] = [
                 "key" : "03afc455-5170-42af-b83e-6b65358c0bea",
                 "userdata":[
