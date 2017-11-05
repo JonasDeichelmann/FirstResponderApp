@@ -26,7 +26,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
-        var helloWorldTimer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(ViewController.location(_:)), userInfo: nil, repeats: true)
+        var _ = Timer.scheduledTimer(timeInterval: 15.0, target: self, selector: #selector(ViewController.location(_:)), userInfo: nil, repeats: true)
         
     }
     
@@ -48,13 +48,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             "key" : "03afc455-5170-42af-b83e-6b65358c0bea",
             "userID" : 1,
             "coordination":[
-                "Latitude" : lat,
-                "Longtituge": long,
+                "latitude" : lat,
+                "longitude": long,
             ],
             "currentDate" : String(describing: Date())
         ]
         TB.temp("\(parameters)")
-        Alamofire.request("http://174.129.62.164/api/smile/", method: .post, parameters: parameters)
+        Alamofire.request("http://174.129.62.164/api/smile/", method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseString { response in
                 print(response)
         }
