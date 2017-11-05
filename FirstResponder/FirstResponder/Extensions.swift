@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import UIKit
+import Alamofire
+import SwiftyJSON
 
 //MARK: - STRING EXTENSION
 extension String{
@@ -27,5 +30,47 @@ extension String{
     
     var isEmail : Bool {
         return true
+    }
+}
+
+extension UIViewController{
+    
+    func checkForInjury(_ key:String, userID:Int, completion: @escaping (geopoint?) -> Void) {
+        let params:[String: Any] = [
+            "key": key,
+            "userID": userID
+        ]
+        var coords:geopoint?
+        Alamofire.request("http://174.129.62.164/api/dest/", method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON { response in
+            print(response)
+            if response.result.isSuccess {
+                let obj = JSON(response.result.value!)
+                if obj.count >= 2{
+                    let lan = obj[1].double!
+                    let lat = obj[0].double!
+                    coords = geopoint(latitude: lat,longitude: lan)
+                    completion(coords)
+                } else {
+                    print("Couldn't get coords")
+                }
+            } else {
+                print("couldn't reach server!")
+            }
+        }
+    }
+}
+class geopoint{
+    var len:Double
+    var lat:Double
+    
+    init(latitude: Double, longitude: Double) {
+        self.len = longitude
+        self.lat = latitude
+    }
+    func getLongitude() -> Double {
+        return self.len
+    }
+    func getLatitude() -> Double {
+        return self.lat
     }
 }
