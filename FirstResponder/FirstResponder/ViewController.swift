@@ -38,18 +38,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func location(_ sender: Any) {
+        sendLocation()
+    }
+    func sendLocation(){
+
         locationManager.startUpdatingLocation()
         let loc = locationManager.location
-        let lat = (loc?.coordinate.latitude)!
-        let long = (loc?.coordinate.longitude)!
-        latitude.text = String(lat)
-        longtitude.text = String(long)
         let parameters: [String: Any] = [
             "key" : "03afc455-5170-42af-b83e-6b65358c0bea",
             "userID" : 1,
             "coordination":[
-                "latitude" : lat,
-                "longitude": long,
+                "latitude" : (loc?.coordinate.latitude)!,
+                "longitude": (loc?.coordinate.longitude)!,
             ],
             "currentDate" : String(describing: Date())
         ]
@@ -58,7 +58,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             .responseString { response in
                 print(response)
         }
-        
+
+
     }
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
