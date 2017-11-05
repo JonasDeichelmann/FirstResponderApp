@@ -8,5 +8,7 @@ target 'FirstResponder' do
   # Pods for FirstResponder
 pod 'TB', :git => 'https://github.com/JonasDeichelmann/ToolBox.git'
 pod 'Alamofire', '~> 4.5'
+pod 'SwiftyPlistManager'
+pod 'Toast-Swift', :git => 'https://github.com/jasonhenderson/Toast-Swift.git'
 
 end
