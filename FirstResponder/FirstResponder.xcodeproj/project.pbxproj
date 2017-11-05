@@ -15,6 +15,8 @@
 		1359F7301FAEE062006049F4 /* AEDPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359F72F1FAEE062006049F4 /* AEDPin.swift */; };
 		1359F7321FAEEBFD006049F4 /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359F7311FAEEBFD006049F4 /* InfoTableViewController.swift */; };
 		1359F7341FAEF4E3006049F4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1359F7331FAEF4E3006049F4 /* Default-568h@2x.png */; };
+		1359F7361FAEFEF2006049F4 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359F7351FAEFEF2006049F4 /* InfoCell.swift */; };
+		1359F7381FAF04F3006049F4 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359F7371FAF04F3006049F4 /* Info.swift */; };
 		18F59A841FAE23A200E9AE8D /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F59A831FAE23A200E9AE8D /* RegisterUserViewController.swift */; };
 		18F59A861FAE2A1C00E9AE8D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F59A851FAE2A1C00E9AE8D /* Extensions.swift */; };
 		93999EE1D86AD23C920A64E1 /* Pods_FirstResponder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0022B1455087207312BE55D1 /* Pods_FirstResponder.framework */; };
@@ -38,6 +40,8 @@
 		1359F72F1FAEE062006049F4 /* AEDPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEDPin.swift; sourceTree = "<group>"; };
 		1359F7311FAEEBFD006049F4 /* InfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
 		1359F7331FAEF4E3006049F4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1359F7351FAEFEF2006049F4 /* InfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		1359F7371FAF04F3006049F4 /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		18F59A831FAE23A200E9AE8D /* RegisterUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewController.swift; sourceTree = "<group>"; };
 		18F59A851FAE2A1C00E9AE8D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4A6D5FE2389EE369FAA3803C /* Pods-FirstResponder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstResponder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirstResponder/Pods-FirstResponder.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,7 +129,9 @@
 				1359F72B1FAEBE68006049F4 /* AEDMapViewController.swift */,
 				1359F72D1FAEC8F5006049F4 /* AEDMapJSONData.swift */,
 				1359F72F1FAEE062006049F4 /* AEDPin.swift */,
+				1359F7351FAEFEF2006049F4 /* InfoCell.swift */,
 				1359F7311FAEEBFD006049F4 /* InfoTableViewController.swift */,
+				1359F7371FAF04F3006049F4 /* Info.swift */,
 			);
 			path = FirstResponder;
 			sourceTree = "<group>";
@@ -286,9 +292,11 @@
 				DD65DE871FAEAD5800FC5295 /* locationManager.swift in Sources */,
 				DD65DE891FAEB77B00FC5295 /* Singelton.swift in Sources */,
 				DD746FCE1FAD79DA00AF07BE /* ViewController.swift in Sources */,
+				1359F7361FAEFEF2006049F4 /* InfoCell.swift in Sources */,
 				1359F7301FAEE062006049F4 /* AEDPin.swift in Sources */,
 				DD746FCC1FAD79DA00AF07BE /* AppDelegate.swift in Sources */,
 				1359F72C1FAEBE68006049F4 /* AEDMapViewController.swift in Sources */,
+				1359F7381FAF04F3006049F4 /* Info.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,7 +428,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FirstResponder/FirstResponder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4E753EWN2N;
+				DEVELOPMENT_TEAM = 6XRGVQSWRU;
 				INFOPLIST_FILE = FirstResponder/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
