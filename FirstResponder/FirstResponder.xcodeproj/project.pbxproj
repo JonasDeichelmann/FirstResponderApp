@@ -21,6 +21,7 @@
 		18F59A861FAE2A1C00E9AE8D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F59A851FAE2A1C00E9AE8D /* Extensions.swift */; };
 		93999EE1D86AD23C920A64E1 /* Pods_FirstResponder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0022B1455087207312BE55D1 /* Pods_FirstResponder.framework */; };
 		DD50AF1D1FAF8A4900996FE0 /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD50AF1C1FAF8A4900996FE0 /* Data.plist */; };
+		DD50AF3D1FAFA47400996FE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD50AF3C1FAFA47400996FE0 /* LaunchScreen.storyboard */; };
 		DD65DE871FAEAD5800FC5295 /* locationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65DE861FAEAD5800FC5295 /* locationManager.swift */; };
 		DD65DE891FAEB77B00FC5295 /* Singelton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65DE881FAEB77B00FC5295 /* Singelton.swift */; };
 		DD7035161FAEBDA6007BE9B1 /* alert.wav in Resources */ = {isa = PBXBuildFile; fileRef = DD7035151FAEBDA6007BE9B1 /* alert.wav */; };
@@ -48,6 +49,7 @@
 		4A6D5FE2389EE369FAA3803C /* Pods-FirstResponder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstResponder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirstResponder/Pods-FirstResponder.debug.xcconfig"; sourceTree = "<group>"; };
 		DD1B50951FAEA12400D304B2 /* FirstResponder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirstResponder.entitlements; sourceTree = "<group>"; };
 		DD50AF1C1FAF8A4900996FE0 /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
+		DD50AF3C1FAFA47400996FE0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD65DE861FAEAD5800FC5295 /* locationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = locationManager.swift; sourceTree = "<group>"; };
 		DD65DE881FAEB77B00FC5295 /* Singelton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singelton.swift; sourceTree = "<group>"; };
 		DD7035151FAEBDA6007BE9B1 /* alert.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alert.wav; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				DD65DE861FAEAD5800FC5295 /* locationManager.swift */,
 				DD746FD21FAD79DA00AF07BE /* Assets.xcassets */,
 				DD746FD71FAD79DA00AF07BE /* Info.plist */,
+				DD50AF3C1FAFA47400996FE0 /* LaunchScreen.storyboard */,
 				DD7035151FAEBDA6007BE9B1 /* alert.wav */,
 				18F59A851FAE2A1C00E9AE8D /* Extensions.swift */,
 				DD65DE881FAEB77B00FC5295 /* Singelton.swift */,
@@ -221,6 +224,7 @@
 				DD746FD31FAD79DA00AF07BE /* Assets.xcassets in Resources */,
 				DD7035161FAEBDA6007BE9B1 /* alert.wav in Resources */,
 				1328C2ED1FAE72EF0052FAAE /* Main.storyboard in Resources */,
+				DD50AF3D1FAFA47400996FE0 /* LaunchScreen.storyboard in Resources */,
 				1359F7341FAEF4E3006049F4 /* Default-568h@2x.png in Resources */,
 				1328C2EF1FAE7DEE0052FAAE /* Login.storyboard in Resources */,
 			);
@@ -447,7 +451,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.deichelmann.firstresponder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -465,7 +469,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.deichelmann.firstresponder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
