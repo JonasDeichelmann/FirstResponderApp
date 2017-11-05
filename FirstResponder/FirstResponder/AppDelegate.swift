@@ -9,6 +9,8 @@
 import UIKit
 import UserNotifications
 import TB
+import Alamofire
+import SwiftyPlistManager
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -66,6 +68,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         let token = tokenParts.joined()
+        
+        //
+        SwiftyPlistManager.shared.getValue(for: "userID", fromPlistWithName: "Data") { (result, err) in
+            if err == nil {
+                let key = "03afc455-5170-42af-b83e-6b65358c0bea"
+                let uid = result!
+                let params:[String:Any] = [
+                    "key": key,
+                    "userID":uid,
+                    "token":token
+                ]
+                Alamofire.request("http://174.129.62.164/api/token/", method: .post, parameters: params, encoding: JSONEncoding.default).response { response in
+                    print(response)
+                }
+            }
+        }
+        
         TB.info("Device Token: \(token)")
         Singelton.shared.TokenID = token
     }

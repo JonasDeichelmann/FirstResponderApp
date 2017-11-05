@@ -38,6 +38,7 @@ class LoginViewController: UIViewController {
                 
             ]
             self.view.makeToastActivity(.center)
+            
             Alamofire.request(requestURL, method: HTTPMethod.post, parameters: JSON, encoding: JSONEncoding.default).responseString { response in
                 
                 SwiftyPlistManager.shared.save(response.result.value!, forKey: "userID", toPlistWithName: "Data") { (err) in
