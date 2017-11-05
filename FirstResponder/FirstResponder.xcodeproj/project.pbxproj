@@ -15,6 +15,8 @@
 		18F59A861FAE2A1C00E9AE8D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F59A851FAE2A1C00E9AE8D /* Extensions.swift */; };
 		93999EE1D86AD23C920A64E1 /* Pods_FirstResponder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0022B1455087207312BE55D1 /* Pods_FirstResponder.framework */; };
 		DD65DE871FAEAD5800FC5295 /* locationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65DE861FAEAD5800FC5295 /* locationManager.swift */; };
+		DD65DE891FAEB77B00FC5295 /* Singelton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65DE881FAEB77B00FC5295 /* Singelton.swift */; };
+		DD7035161FAEBDA6007BE9B1 /* alert.wav in Resources */ = {isa = PBXBuildFile; fileRef = DD7035151FAEBDA6007BE9B1 /* alert.wav */; };
 		DD746FCC1FAD79DA00AF07BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD746FCB1FAD79DA00AF07BE /* AppDelegate.swift */; };
 		DD746FCE1FAD79DA00AF07BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD746FCD1FAD79DA00AF07BE /* ViewController.swift */; };
 		DD746FD31FAD79DA00AF07BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD746FD21FAD79DA00AF07BE /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 		4A6D5FE2389EE369FAA3803C /* Pods-FirstResponder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstResponder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirstResponder/Pods-FirstResponder.debug.xcconfig"; sourceTree = "<group>"; };
 		DD1B50951FAEA12400D304B2 /* FirstResponder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirstResponder.entitlements; sourceTree = "<group>"; };
 		DD65DE861FAEAD5800FC5295 /* locationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = locationManager.swift; sourceTree = "<group>"; };
+		DD65DE881FAEB77B00FC5295 /* Singelton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singelton.swift; sourceTree = "<group>"; };
+		DD7035151FAEBDA6007BE9B1 /* alert.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alert.wav; sourceTree = "<group>"; };
 		DD746FC81FAD79DA00AF07BE /* FirstResponder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstResponder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD746FCB1FAD79DA00AF07BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD746FCD1FAD79DA00AF07BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,7 +108,9 @@
 				DD746FD21FAD79DA00AF07BE /* Assets.xcassets */,
 				DD746FD71FAD79DA00AF07BE /* Info.plist */,
 				18F59A831FAE23A200E9AE8D /* RegisterUserViewController.swift */,
+				DD7035151FAEBDA6007BE9B1 /* alert.wav */,
 				18F59A851FAE2A1C00E9AE8D /* Extensions.swift */,
+				DD65DE881FAEB77B00FC5295 /* Singelton.swift */,
 				1328C2EB1FAE72EF0052FAAE /* Main.storyboard */,
 				1328C2EE1FAE7DEE0052FAAE /* Login.storyboard */,
 				18DAFD111FAE977400DC31F6 /* Data.plist */,
@@ -183,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD746FD31FAD79DA00AF07BE /* Assets.xcassets in Resources */,
+				DD7035161FAEBDA6007BE9B1 /* alert.wav in Resources */,
 				1328C2ED1FAE72EF0052FAAE /* Main.storyboard in Resources */,
 				18DAFD121FAE977400DC31F6 /* Data.plist in Resources */,
 				1328C2EF1FAE7DEE0052FAAE /* Login.storyboard in Resources */,
@@ -261,6 +268,7 @@
 				1328C2EA1FAE723D0052FAAE /* callViewController.swift in Sources */,
 				DD746FE21FAD84CB00AF07BE /* LoginViewController.swift in Sources */,
 				DD65DE871FAEAD5800FC5295 /* locationManager.swift in Sources */,
+				DD65DE891FAEB77B00FC5295 /* Singelton.swift in Sources */,
 				DD746FCE1FAD79DA00AF07BE /* ViewController.swift in Sources */,
 				DD746FCC1FAD79DA00AF07BE /* AppDelegate.swift in Sources */,
 			);
@@ -394,9 +402,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FirstResponder/FirstResponder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FKG44PNF2G;
+				DEVELOPMENT_TEAM = 6XRGVQSWRU;
 				INFOPLIST_FILE = FirstResponder/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.deichelmann.firstresponder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,9 +420,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FirstResponder/FirstResponder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FKG44PNF2G;
+				DEVELOPMENT_TEAM = 6XRGVQSWRU;
 				INFOPLIST_FILE = FirstResponder/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.deichelmann.firstresponder;
 				PRODUCT_NAME = "$(TARGET_NAME)";

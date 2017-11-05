@@ -8,6 +8,7 @@
 
 import UIKit
 import UserNotifications
+import TB
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -65,7 +66,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         let token = tokenParts.joined()
-        print("Device Token: \(token)")
+        TB.info("Device Token: \(token)")
+        Singelton.shared.TokenID = token
     }
     
     func application(_ application: UIApplication,

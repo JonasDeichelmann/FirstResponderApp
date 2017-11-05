@@ -69,10 +69,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             break
         case .authorizedWhenInUse:
             TB.info("If authorized when in use")
-            //            locationManager.startUpdatingLocation()
-            //            let loc = locationManager.location
-            //            let lat = (loc?.coordinate.latitude)!
-            //            let long = (loc?.coordinate.longitude)!
             break
         case .authorizedAlways:
             TB.info("If always authorized")
