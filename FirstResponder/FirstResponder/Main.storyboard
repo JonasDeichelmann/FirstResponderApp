@@ -122,10 +122,81 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Info" id="JXS-4d-nBQ"/>
+                    <connections>
+                        <segue destination="k1K-q7-Lh5" kind="show" identifier="segueInfo" id="6Hs-Bn-gdl"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5B8-fx-6XP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="348" y="1718.5907046476764"/>
+        </scene>
+        <!--Info Cell View-->
+        <scene sceneID="ArA-6s-7ww">
+            <objects>
+                <viewController id="k1K-q7-Lh5" customClass="InfoCellView" customModule="FirstResponder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aso-1g-wOD"/>
+                        <viewControllerLayoutGuide type="bottom" id="aRH-tu-7ul"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dRx-N0-oNc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pSQ-wi-Qkc">
+                                <rect key="frame" x="16" y="72" width="343" height="521"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Untrained. If you're not trained in CPR, then provide hands-only CPR. That means uninterrupted chest compressions of 100 to 120 a minute until paramedics arrive (described in more detail below). You don't need to try rescue breathing.
+</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+Trained and ready to go. If you're well-trained and confident in your ability, check to see if there is a pulse and breathing. If there is no breathing or a pulse within 10 seconds, begin chest compressions. Start CPR with 30 chest compressions before giving two rescue breaths.
+</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+Trained but rusty. If you've previously received CPR training but you're not confident in your abilities, then just do chest compressions at a rate of 100 to 120 a minute. (Details described below.)</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SXG-r0-87t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1693.5999999999999" y="1350.6746626686659"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="r3u-re-FSV">

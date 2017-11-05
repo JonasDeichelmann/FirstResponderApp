@@ -103,6 +103,7 @@
 				DD746FCD1FAD79DA00AF07BE /* ViewController.swift */,
 				DD746FE11FAD84CB00AF07BE /* LoginViewController.swift */,
 				18F59A831FAE23A200E9AE8D /* RegisterUserViewController.swift */,
+				DD9B49FD1FAFAE4900E4A878 /* InfoCellView.swift */,
 				1359F72B1FAEBE68006049F4 /* AEDMapViewController.swift */,
 				1359F7311FAEEBFD006049F4 /* InfoTableViewController.swift */,
 			);
@@ -148,7 +149,6 @@
 				1359F72F1FAEE062006049F4 /* AEDPin.swift */,
 				1359F7351FAEFEF2006049F4 /* InfoCell.swift */,
 				1359F7371FAF04F3006049F4 /* Info.swift */,
-				DD9B49FD1FAFAE4900E4A878 /* InfoCellView.swift */,
 			);
 			path = FirstResponder;
 			sourceTree = "<group>";
