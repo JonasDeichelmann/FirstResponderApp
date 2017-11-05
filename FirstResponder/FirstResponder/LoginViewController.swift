@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 import TB
 import Alamofire
+import SwiftyPlistManager
+import Toast_Swift
 
 class LoginViewController: UIViewController {
     
@@ -25,20 +27,33 @@ class LoginViewController: UIViewController {
     @IBAction func login() {
         if userField.text != nil && passField.text != nil {
             
-            let requestURL = "http://174.129.62.164/api/login"
+            let requestURL = "http://174.129.62.164/api/login/"
             let APIKey = "03afc455-5170-42af-b83e-6b65358c0bea"
             let user = userField.text!
             let pass = passField.text!
             let JSON:[String: Any] = [
                 "key": APIKey,
-                "userdata": [
-                    "name" : user,
-                    "pass" : pass
-                ]
+                "username" : user,
+                "password" : pass
+                
             ]
-            
-            Alamofire.request(requestURL, method: HTTPMethod.post, parameters: JSON, encoding: JSONEncoding.default, headers: nil).response { response in
-                print(response)
+            self.view.makeToastActivity(.center)
+            Alamofire.request(requestURL, method: HTTPMethod.post, parameters: JSON, encoding: JSONEncoding.default).responseString { response in
+                
+                SwiftyPlistManager.shared.save(response.result.value!, forKey: "userID", toPlistWithName: "Data") { (err) in
+                    if err == nil {
+                        print("Value successfully saved into plist.")
+                    }
+                }
+                SwiftyPlistManager.shared.getValue(for: "userID", fromPlistWithName: "Data") { (result, err) in
+                    if err == nil {
+                        print("The Value is: '\(result ?? "No Value Fetched")'")
+                    }
+                }
+                DispatchQueue.main.async {
+                    self.view.hideToastActivity()
+                    self.performSegue(withIdentifier: "loginSuccess", sender: nil)
+                }
             }
         }
     }

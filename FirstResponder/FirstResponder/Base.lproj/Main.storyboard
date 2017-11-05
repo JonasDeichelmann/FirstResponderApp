@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DmK-jQ-XIR">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DmK-jQ-XIR">
+>>>>>>> 247ed19fffc54cdaa7071c7439d45122b926ce5b
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -53,7 +57,11 @@
         <!--AED Map-->
         <scene sceneID="zcg-NY-2XJ">
             <objects>
+<<<<<<< HEAD
                 <viewController id="gg5-KC-As7" customClass="AEDMapViewController" customModule="FirstResponder" customModuleProvider="target" sceneMemberID="viewController">
+=======
+                <viewController id="gg5-KC-As7" customClass="ViewController" customModule="FirstResponder" customModuleProvider="target" sceneMemberID="viewController">
+>>>>>>> 247ed19fffc54cdaa7071c7439d45122b926ce5b
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gVa-qw-ryH"/>
                         <viewControllerLayoutGuide type="bottom" id="kYJ-zo-eVL"/>
@@ -62,9 +70,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+<<<<<<< HEAD
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1Yj-MY-dar">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                             </mapView>
+=======
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAK-sW-H5l">
+                                <rect key="frame" x="137" y="90" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="location:" destination="gg5-KC-As7" eventType="touchUpInside" id="K9O-Nv-bEH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vx0-25-5kR">
+                                <rect key="frame" x="141" y="128" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvd-2C-sWe">
+                                <rect key="frame" x="124" y="157" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+>>>>>>> 247ed19fffc54cdaa7071c7439d45122b926ce5b
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -74,9 +107,17 @@
                             <constraint firstItem="1Yj-MY-dar" firstAttribute="leading" secondItem="keP-x3-Ne0" secondAttribute="leading" id="huu-n4-uIl"/>
                         </constraints>
                     </view>
+<<<<<<< HEAD
                     <tabBarItem key="tabBarItem" title="AED Map" id="LXh-se-ztD"/>
                     <connections>
                         <outlet property="mapView" destination="1Yj-MY-dar" id="n9r-2H-71M"/>
+=======
+                    <tabBarItem key="tabBarItem" title="Item 2" id="LXh-se-ztD"/>
+                    <connections>
+                        <outlet property="latitude" destination="hvd-2C-sWe" id="qqV-fY-4Ni"/>
+                        <outlet property="locationButton" destination="hAK-sW-H5l" id="LOW-U2-HWQ"/>
+                        <outlet property="longtitude" destination="vx0-25-5kR" id="6WC-lX-qVo"/>
+>>>>>>> 247ed19fffc54cdaa7071c7439d45122b926ce5b
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OFI-3v-TIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -141,7 +182,7 @@
                     <tabBarItem key="tabBarItem" title="Dashboard" id="2aP-pB-4Kb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="h33-Fn-N0w">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

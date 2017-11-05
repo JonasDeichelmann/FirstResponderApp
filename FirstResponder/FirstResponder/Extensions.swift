@@ -10,10 +10,12 @@ import Foundation
 
 //MARK: - STRING EXTENSION
 extension String{
+    
+    var length : Int{
+        return self.characters.count
+    }
+    
     var isUserName:Bool{
-        var length : Int{
-            return self.characters.count
-        }
         let s = self
         if s.characters.count > 5 && s.characters.count < 63 {
             return true
@@ -22,6 +24,8 @@ extension String{
             return false
         }
     }
+    
     var isEmail : Bool {
-        return true;
-    }}
+        return true
+    }
+}
