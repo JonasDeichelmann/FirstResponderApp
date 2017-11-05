@@ -14,6 +14,7 @@
 		1359F72E1FAEC8F5006049F4 /* AEDMapJSONData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359F72D1FAEC8F5006049F4 /* AEDMapJSONData.swift */; };
 		1359F7301FAEE062006049F4 /* AEDPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359F72F1FAEE062006049F4 /* AEDPin.swift */; };
 		1359F7321FAEEBFD006049F4 /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359F7311FAEEBFD006049F4 /* InfoTableViewController.swift */; };
+		1359F7341FAEF4E3006049F4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1359F7331FAEF4E3006049F4 /* Default-568h@2x.png */; };
 		18F59A841FAE23A200E9AE8D /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F59A831FAE23A200E9AE8D /* RegisterUserViewController.swift */; };
 		18F59A861FAE2A1C00E9AE8D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F59A851FAE2A1C00E9AE8D /* Extensions.swift */; };
 		93999EE1D86AD23C920A64E1 /* Pods_FirstResponder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0022B1455087207312BE55D1 /* Pods_FirstResponder.framework */; };
@@ -36,6 +37,7 @@
 		1359F72D1FAEC8F5006049F4 /* AEDMapJSONData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEDMapJSONData.swift; sourceTree = "<group>"; };
 		1359F72F1FAEE062006049F4 /* AEDPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEDPin.swift; sourceTree = "<group>"; };
 		1359F7311FAEEBFD006049F4 /* InfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
+		1359F7331FAEF4E3006049F4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		18F59A831FAE23A200E9AE8D /* RegisterUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewController.swift; sourceTree = "<group>"; };
 		18F59A851FAE2A1C00E9AE8D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4A6D5FE2389EE369FAA3803C /* Pods-FirstResponder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstResponder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirstResponder/Pods-FirstResponder.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		DD746FBF1FAD79DA00AF07BE = {
 			isa = PBXGroup;
 			children = (
+				1359F7331FAEF4E3006049F4 /* Default-568h@2x.png */,
 				DD746FCA1FAD79DA00AF07BE /* FirstResponder */,
 				DD746FC91FAD79DA00AF07BE /* Products */,
 				997CC9AD2059EBDD64E57D83 /* Pods */,
@@ -200,7 +203,7 @@
 				DD746FD31FAD79DA00AF07BE /* Assets.xcassets in Resources */,
 				DD7035161FAEBDA6007BE9B1 /* alert.wav in Resources */,
 				1328C2ED1FAE72EF0052FAAE /* Main.storyboard in Resources */,
-				18DAFD121FAE977400DC31F6 /* Data.plist in Resources */,
+				1359F7341FAEF4E3006049F4 /* Default-568h@2x.png in Resources */,
 				1328C2EF1FAE7DEE0052FAAE /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
