@@ -35,7 +35,7 @@ extension String{
 
 extension UIViewController{
     
-    func checkForInjury(_ key:String, userID:Int, completion: @escaping (geopoint?) -> Void) {
+    func checkForInjury(_ key:String, userID:String, completion: @escaping (geopoint?) -> Void) {
         let params:[String: Any] = [
             "key": key,
             "userID": userID

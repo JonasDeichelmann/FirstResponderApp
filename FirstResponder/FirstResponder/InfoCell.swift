@@ -10,12 +10,11 @@ import UIKit
 
 class InfoCell: UITableViewCell {
 
-    @IBOutlet var infoTableView: UITableView!
     @IBOutlet var detailLbl: UILabel!
-    @IBOutlet var textLbl: UILabel!
+
     @IBOutlet var titleLbl: UILabel!
-    
-    
+
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,5 +25,5 @@ class InfoCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }

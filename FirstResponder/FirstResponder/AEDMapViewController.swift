@@ -10,9 +10,8 @@ import UIKit
 import MapKit
 import Alamofire
 import TB
+import SwiftyPlistManager
 
-
-//TODO: Hardcode the Pin Data
 
 class AEDMapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
@@ -20,9 +19,8 @@ class AEDMapViewController: UIViewController {
     var y : Float?
     var name : String?
     var desc : String?
-    
+
     let initialLocation = CLLocation(latitude: 36.654775, longitude: -121.800588)
-    // key 2729a7acf486c6305eeb2f627b8c613e20980a28
 
     let regionRadius: CLLocationDistance = 1000
     func centerMapOnLocation(location: CLLocation) {
@@ -30,67 +28,74 @@ class AEDMapViewController: UIViewController {
                                                                   regionRadius, regionRadius)
         mapView.setRegion(coordinateRegion, animated: true)
     }
-//
-//     func getAEDPins(handler: @escaping (Array<AEDPin>?) -> ()) {
-//        let base = "http://paloalto.cloudapi.junar.com/"
-//        let path = "api/v2/datastreams/AED-LOCAT-99951/data.json/"
-//        let key = "2729a7acf486c6305eeb2f627b8c613e20980a28"
-//        let call = base + path + "?auth_key=" + key + "&limit=100"
-//        print(call)
-//        Alamofire.request(call)
-//
-//            .responseJSON { response in
-//                guard response.result.isSuccess else {
-//                    print("Error while fetching jsondata")
-//                    return
-//                }
-//                
-//                guard let responseJSON = response.result.value else {
-//                    print("Invalid jsondata received from the server")
-//                    return
-//                }
-//                
-//                var pins: Array<AEDPin> = []
-//                let json = response.result
-//                print(pins)
-////                json.forEach{(_, json) in
-////                    print(json)
-////                    pins.append(AEDPin(json: json))
-////                    print(pins)
-////                }
-//
-//                handler(pins)
-//        }
-//    }
 
-    
-    
+    var locations = [CLLocation]()
+    var pin1 = CLLocation(latitude: 36.654025, longitude: -121.798923)
+    var pin2 = CLLocation(latitude: 36.654131, longitude: -121.799873)
+    var pin4 = CLLocation(latitude: 36.652481, longitude: -121.797352)
+    var pin5 = CLLocation(latitude: 36.652480, longitude: -121.797351)
+    var pin6 = CLLocation(latitude: 36.655320, longitude: -121.800523)
+    var pin7 = CLLocation(latitude: 36.655199, longitude: -121.795516)
+    var pin8 = CLLocation(latitude:  36.654293, longitude: -121.801766)
+    var pin9 = CLLocation(latitude:  36.652636, longitude: -121.796141)
+    var pin10 = CLLocation(latitude:  36.655812, longitude: -121.807174)
+    var pin11 = CLLocation(latitude:  36.654293, longitude: -121.801766)
+    var pin12 = CLLocation(latitude:  36.654293, longitude: -121.801766)
+
+
+
+    func loadToMap(){
+
+        self.locations.append(pin1)
+        self.locations.append(pin2)
+        self.locations.append(pin4)
+        self.locations.append(pin5)
+        self.locations.append(pin6)
+        self.locations.append(pin7)
+        self.locations.append(pin8)
+        self.locations.append(pin9)
+        self.locations.append(pin10)
+        self.locations.append(pin11)
+        self.locations.append(pin12)
+
+
+        mapView.showAnnotations(self.locations as! [MKAnnotation], animated: true)
+
+    }
+
+
+
+    // Remove values if the array is too big
+
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-//        centerMapOnLocation(location: initialLocation)
-//        getAEDPins{ (pins: Array<AEDPin>?) in
-           // if let data = pins?[]() {
-                
-             //   print(data)
-        //}
-//        }
+        self.loadToMap()
     }
-        override func didReceiveMemoryWarning() {
+
+    override func viewDidAppear(_ animated: Bool) {
+
+
+
+        SwiftyPlistManager.shared.getValue(for: "userID", fromPlistWithName: "Data") { (result, err) in
+            if err == nil {
+                if result != nil{
+                checkForInjury("03afc455-5170-42af-b83e-6b65358c0bea", userID: result as! String) { coords  in
+                    let lat = coords?.getLatitude()
+                    let lon = coords?.getLongitude()
+                    let urgentPin = CLLocation(latitude: lat!, longitude: lon!)
+                    self.locations.append(urgentPin)
+                    }
+
+                }
+            }
+        }
+
+
+    }
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
