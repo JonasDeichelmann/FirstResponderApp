@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Dashboard-->
         <scene sceneID="P75-TA-O9p">
             <objects>
                 <tableViewController storyboardIdentifier="Dashboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="M9T-Mx-nUP" customClass="callViewController" customModule="FirstResponder" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,7 +40,7 @@
                             <outlet property="delegate" destination="M9T-Mx-nUP" id="HO7-hT-fQU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="moB-HU-yXX"/>
+                    <navigationItem key="navigationItem" title="Dashboard" id="moB-HU-yXX"/>
                     <connections>
                         <outlet property="viewModel" destination="UlW-p9-Dua" id="QUF-yq-g3N"/>
                     </connections>
@@ -73,7 +73,7 @@
                             <constraint firstItem="1Yj-MY-dar" firstAttribute="leading" secondItem="keP-x3-Ne0" secondAttribute="leading" id="huu-n4-uIl"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="AED Map" id="LXh-se-ztD"/>
+                    <tabBarItem key="tabBarItem" title="AED Map" image="Layer 3@0,5x" selectedImage="Layer 3@0,5x" id="LXh-se-ztD"/>
                     <connections>
                         <outlet property="mapView" destination="1Yj-MY-dar" id="n9r-2H-71M"/>
                     </connections>
@@ -82,7 +82,7 @@
             </objects>
             <point key="canvasLocation" x="98" y="997"/>
         </scene>
-        <!--Info Table View Controller-->
+        <!--Info-->
         <scene sceneID="bcO-IB-aDA">
             <objects>
                 <tableViewController id="FoY-bU-ruG" customClass="InfoTableViewController" customModule="FirstResponder" customModuleProvider="target" sceneMemberID="viewController">
@@ -121,7 +121,7 @@
                             <outlet property="delegate" destination="FoY-bU-ruG" id="tX5-Yd-xHG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="JXS-4d-nBQ"/>
+                    <navigationItem key="navigationItem" title="Info" id="JXS-4d-nBQ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5B8-fx-6XP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -146,11 +146,11 @@
             </objects>
             <point key="canvasLocation" x="-1298" y="658"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Dash-->
         <scene sceneID="jPf-dF-OZK">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pi0-qh-w8Z" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" selectedImage="Default.png" systemItem="favorites" id="2aP-pB-4Kb"/>
+                    <tabBarItem key="tabBarItem" title="Dash" image="Layer 4@0,5x" selectedImage="Layer 4@0,5x" id="2aP-pB-4Kb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="h33-Fn-N0w">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -165,11 +165,11 @@
             </objects>
             <point key="canvasLocation" x="-346.39999999999998" y="330.58470764617692"/>
         </scene>
-        <!--Item-->
+        <!--Info-->
         <scene sceneID="iVj-m0-V3y">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="54L-66-JbC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Rye-Lb-yTV"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="infoTab" selectedImage="infoTab" id="Rye-Lb-yTV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="k0o-rh-JNW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -186,6 +186,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Default.png" width="320" height="568"/>
+        <image name="Layer 3@0,5x" width="25" height="25"/>
+        <image name="Layer 4@0,5x" width="25" height="25"/>
+        <image name="infoTab" width="25" height="25"/>
     </resources>
 </document>

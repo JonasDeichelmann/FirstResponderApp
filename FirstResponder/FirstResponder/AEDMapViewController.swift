@@ -85,7 +85,6 @@ class AEDMapViewController: UIViewController {
                     let urgentPin = CLLocation(latitude: lat!, longitude: lon!)
                     self.locations.append(urgentPin)
                     }
-
                 }
             }
         }

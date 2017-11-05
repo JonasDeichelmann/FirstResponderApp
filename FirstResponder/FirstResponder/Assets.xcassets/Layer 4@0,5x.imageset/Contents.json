@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Layer 2@0,5x.png",
+      "filename" : "Layer 4@0,5x.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Layer 2@1x.png",
+      "filename" : "Layer 4.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Layer 2@1,5x.png",
+      "filename" : "Layer 4@1,5x.png",
       "scale" : "3x"
     }
   ],
