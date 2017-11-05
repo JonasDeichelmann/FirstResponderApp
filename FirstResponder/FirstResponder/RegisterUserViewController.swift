@@ -45,8 +45,7 @@ class RegisterUserViewController: UIViewController {
                     "name" : user,
                     "password": pass,
                     "devicetoken": token
-                ],
-                "ignored":1
+                ]
             ]
             self.view.makeToastActivity(.center)
             Alamofire.request("http://174.129.62.164/api/register/", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseString { response in
@@ -84,6 +83,7 @@ class RegisterUserViewController: UIViewController {
                             }
                         }else {
                             DispatchQueue.main.async {
+                                self.view.hideToastActivity()
                                 self.performSegue(withIdentifier: "toLogin", sender: nil)
                             }
                         }

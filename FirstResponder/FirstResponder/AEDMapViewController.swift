@@ -9,8 +9,10 @@
 import UIKit
 import MapKit
 import Alamofire
+import TB
 
 
+//TODO: Hardcode the Pin Data
 
 class AEDMapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
@@ -21,59 +23,59 @@ class AEDMapViewController: UIViewController {
     
     let initialLocation = CLLocation(latitude: 36.654775, longitude: -121.800588)
     // key 2729a7acf486c6305eeb2f627b8c613e20980a28
-    
 
-    
-    
     let regionRadius: CLLocationDistance = 1000
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
                                                                   regionRadius, regionRadius)
         mapView.setRegion(coordinateRegion, animated: true)
     }
-    
-     func getAEDPins(handler: @escaping (Array<AEDPin>?) -> ()) {
-        Alamofire.request(
-            "https://paloalto.cloudapi.junar.com/api/v2/datastreams/AED-LOCAT-99951/data.json/?auth_key=2729a7acf486c6305eeb2f627b8c613e20980a28&limit=100"
-            )
-            .responseJSON { response in
-                guard response.result.isSuccess else {
-                    print("Error while fetching jsondata")
-                    return
-                }
-                
-                guard let responseJSON = response.result.value else {
-                    print("Invalid jsondata received from the server")
-                    return
-                }
-                
-                var pins: Array<AEDPin> = []
-                let json = response.result
-                //print(json)
-                
-//                json.forEach{(_, json) in
-//                    print(json)
-//                    pins.append(AEDPin(json: json))
-//                    print(pins)
+//
+//     func getAEDPins(handler: @escaping (Array<AEDPin>?) -> ()) {
+//        let base = "http://paloalto.cloudapi.junar.com/"
+//        let path = "api/v2/datastreams/AED-LOCAT-99951/data.json/"
+//        let key = "2729a7acf486c6305eeb2f627b8c613e20980a28"
+//        let call = base + path + "?auth_key=" + key + "&limit=100"
+//        print(call)
+//        Alamofire.request(call)
+//
+//            .responseJSON { response in
+//                guard response.result.isSuccess else {
+//                    print("Error while fetching jsondata")
+//                    return
 //                }
 //                
-                handler(pins)
-        }
-    }
+//                guard let responseJSON = response.result.value else {
+//                    print("Invalid jsondata received from the server")
+//                    return
+//                }
+//                
+//                var pins: Array<AEDPin> = []
+//                let json = response.result
+//                print(pins)
+////                json.forEach{(_, json) in
+////                    print(json)
+////                    pins.append(AEDPin(json: json))
+////                    print(pins)
+////                }
+//
+//                handler(pins)
+//        }
+//    }
 
     
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        centerMapOnLocation(location: initialLocation)
-        getAEDPins{ (pins: Array<AEDPin>?) in
+//        centerMapOnLocation(location: initialLocation)
+//        getAEDPins{ (pins: Array<AEDPin>?) in
            // if let data = pins?[]() {
                 
              //   print(data)
         //}
-        }}
-
+//        }
+    }
         override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
