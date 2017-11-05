@@ -57,12 +57,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-<<<<<<< HEAD
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>To get the next Gasstation from your current location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>To get the next Gasstation from your current location</string>
-=======
->>>>>>> 247ed19fffc54cdaa7071c7439d45122b926ce5b
 </dict>
 </plist>

@@ -51,12 +51,12 @@ class AEDMapViewController: UIViewController {
                 let json = response.result
                 //print(json)
                 
-                json.forEach{(_, json) in
-                    print(json)
-                    pins.append(AEDPin(json: json))
-                    print(pins)
-                }
-                
+//                json.forEach{(_, json) in
+//                    print(json)
+//                    pins.append(AEDPin(json: json))
+//                    print(pins)
+//                }
+//                
                 handler(pins)
         }
     }
