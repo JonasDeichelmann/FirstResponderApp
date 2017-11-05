@@ -30,6 +30,7 @@
 		18F59A831FAE23A200E9AE8D /* RegisterUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewController.swift; sourceTree = "<group>"; };
 		18F59A851FAE2A1C00E9AE8D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4A6D5FE2389EE369FAA3803C /* Pods-FirstResponder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstResponder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirstResponder/Pods-FirstResponder.debug.xcconfig"; sourceTree = "<group>"; };
+		DD1B50951FAEA12400D304B2 /* FirstResponder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirstResponder.entitlements; sourceTree = "<group>"; };
 		DD746FC81FAD79DA00AF07BE /* FirstResponder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstResponder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD746FCB1FAD79DA00AF07BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD746FCD1FAD79DA00AF07BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +93,7 @@
 		DD746FCA1FAD79DA00AF07BE /* FirstResponder */ = {
 			isa = PBXGroup;
 			children = (
+				DD1B50951FAEA12400D304B2 /* FirstResponder.entitlements */,
 				1328C2E91FAE723D0052FAAE /* callViewController.swift */,
 				DD746FCB1FAD79DA00AF07BE /* AppDelegate.swift */,
 				DD746FCD1FAD79DA00AF07BE /* ViewController.swift */,
@@ -143,6 +145,11 @@
 					DD746FC71FAD79DA00AF07BE = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -378,12 +385,13 @@
 			baseConfigurationReference = 4A6D5FE2389EE369FAA3803C /* Pods-FirstResponder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FirstResponder/FirstResponder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FKG44PNF2G;
 				INFOPLIST_FILE = FirstResponder/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.csumb.FirstResponder;
+				PRODUCT_BUNDLE_IDENTIFIER = com.deichelmann.firstresponder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -395,12 +403,13 @@
 			baseConfigurationReference = DD7BDD20AE4C62B40599EEEB /* Pods-FirstResponder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FirstResponder/FirstResponder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FKG44PNF2G;
 				INFOPLIST_FILE = FirstResponder/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.csumb.FirstResponder;
+				PRODUCT_BUNDLE_IDENTIFIER = com.deichelmann.firstresponder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
