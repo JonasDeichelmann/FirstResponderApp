@@ -48,14 +48,14 @@ class RegisterUserViewController: UIViewController {
                 ]
             ]
             self.view.makeToastActivity(.center)
-            Alamofire.request("http://52.90.174.121/api/register/", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseString { response in
+            Alamofire.request("http://34.232.174.236/api/register/", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseString { response in
                 print(response)
                 print(response.result)
                 
                 //MARK: - IF USER REGISTERED
                 if response.result.isSuccess {
                     
-                    let requestURL = "http://52.90.174.121/api/login/"
+                    let requestURL = "http://34.232.174.236/api/login/"
                     let APIKey = "03afc455-5170-42af-b83e-6b65358c0bea"
                     
                     let JSON:[String: Any] = [

@@ -116,7 +116,7 @@ class callViewController: UITableViewController, CLLocationManagerDelegate{
             "currentDate" : String(describing: Date())
         ]
         TB.temp("\(parameters)")
-        Alamofire.request("http://52.90.174.121/api/update/", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        Alamofire.request("http://34.232.174.236/api/update/", method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseString { response in
                 TB.info("\(response)")
         }

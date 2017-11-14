@@ -81,7 +81,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     "userID":uid,
                     "token":token
                 ]
-                Alamofire.request("http://52.90.174.121/api/token/", method: .post, parameters: params, encoding: JSONEncoding.default).response { response in
+                Alamofire.request("http://34.232.174.236/api/token/", method: .post, parameters: params, encoding: JSONEncoding.default).response { response in
                     print(response)
                 }
             }
@@ -134,7 +134,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             "userID": userID
         ]
         var coords:geopoint?
-        Alamofire.request("http://52.90.174.121/api/dest/", method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON { response in
+        Alamofire.request("http://34.232.174.236/api/dest/", method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON { response in
             print(response)
             if response.result.isSuccess {
                 let obj = JSON(response.result.value!)
