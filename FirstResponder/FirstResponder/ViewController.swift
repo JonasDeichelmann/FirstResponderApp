@@ -54,7 +54,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             "currentDate" : String(describing: Date())
         ]
         TB.temp("\(parameters)")
-        Alamofire.request("http://174.129.62.164/api/smile/", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        Alamofire.request("http://52.90.174.121/api/smile/", method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseString { response in
                 print(response)
         }

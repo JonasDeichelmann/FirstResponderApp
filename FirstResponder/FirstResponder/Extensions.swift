@@ -41,7 +41,7 @@ extension UIViewController{
             "userID": userID
         ]
         var coords:geopoint?
-        Alamofire.request("http://174.129.62.164/api/dest/", method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON { response in
+        Alamofire.request("http://52.90.174.121/api/dest/", method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON { response in
             print(response)
             if response.result.isSuccess {
                 let obj = JSON(response.result.value!)

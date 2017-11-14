@@ -11,6 +11,8 @@ import UserNotifications
 import TB
 import Alamofire
 import SwiftyPlistManager
+import CoreLocation
+import SwiftyJSON
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -79,7 +81,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     "userID":uid,
                     "token":token
                 ]
-                Alamofire.request("http://174.129.62.164/api/token/", method: .post, parameters: params, encoding: JSONEncoding.default).response { response in
+                Alamofire.request("http://52.90.174.121/api/token/", method: .post, parameters: params, encoding: JSONEncoding.default).response { response in
                     print(response)
                 }
             }
@@ -95,31 +97,59 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         TB.info("Receive Notification")
-        let url = ""
+        var url = ""
         SwiftyPlistManager.shared.getValue(for: "userID", fromPlistWithName: "Data") { (result, err) in
             if err == nil {
                 if result != nil{
                     checkForInjury("03afc455-5170-42af-b83e-6b65358c0bea", userID: result as! String) { coords  in
                         let lat = coords?.getLatitude()
                         let lon = coords?.getLongitude()
-                        let urgentPin = CLLocation(latitude: lat!, longitude: lon!)
                         url = "http://maps.apple.com/maps?saddr=36.654775,-121.800588&daddr=\(lat!),\(lon!)"
                     }
 
                 }
             }
         }
-        let actionSheetController: UIAlertController = UIAlertController(title: "You got an Call!", message: "Hey, you got an Call.", preferredStyle: .alert)
-        let cancelAction: UIAlertAction = UIAlertAction(title: "Navigation", style: .default) { action -> Void in
-            startNavigation(url: url)
-        }
-        actionSheetController.addAction(cancelAction)
-        self.present(actionSheetController, animated: true, completion: nil)
-
+        let topWindow = UIWindow(frame: UIScreen.main.bounds)
+        topWindow.rootViewController = UIViewController()
+        topWindow.windowLevel = UIWindowLevelAlert + 1
+        let alert = UIAlertController(title: "You got an Call!", message: "Hey, you got an Call.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "confirm"), style: .default, handler: {(_ action: UIAlertAction) -> Void in
+            self.startNavigation(url: url)
+            // continue your work
+            // important to hide the window after work completed.
+            // this also keeps a reference to the window until the action is invoked.
+            topWindow.isHidden = true
+        }))
+        topWindow.makeKeyAndVisible()
+        topWindow.rootViewController?.present(alert, animated: true, completion: { _ in })
 
     }
     func startNavigation(url: String){
         UIApplication.shared.openURL(URL(string:url)!)
+    }
+    func checkForInjury(_ key:String, userID:String, completion: @escaping (geopoint?) -> Void) {
+        let params:[String: Any] = [
+            "key": key,
+            "userID": userID
+        ]
+        var coords:geopoint?
+        Alamofire.request("http://52.90.174.121/api/dest/", method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON { response in
+            print(response)
+            if response.result.isSuccess {
+                let obj = JSON(response.result.value!)
+                if obj.count >= 2{
+                    let lan = obj[1].double!
+                    let lat = obj[0].double!
+                    coords = geopoint(latitude: lat,longitude: lan)
+                    completion(coords)
+                } else {
+                    print("Couldn't get coords")
+                }
+            } else {
+                print("couldn't reach server!")
+            }
+        }
     }
 
 }
