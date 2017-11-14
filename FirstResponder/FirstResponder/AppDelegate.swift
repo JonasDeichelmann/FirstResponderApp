@@ -93,6 +93,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFailToRegisterForRemoteNotificationsWithError error: Error) {
         print("Failed to register: \(error)")
     }
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        TB.info("Receive Notification")
+        let url = ""
+        SwiftyPlistManager.shared.getValue(for: "userID", fromPlistWithName: "Data") { (result, err) in
+            if err == nil {
+                if result != nil{
+                    checkForInjury("03afc455-5170-42af-b83e-6b65358c0bea", userID: result as! String) { coords  in
+                        let lat = coords?.getLatitude()
+                        let lon = coords?.getLongitude()
+                        let urgentPin = CLLocation(latitude: lat!, longitude: lon!)
+                        url = "http://maps.apple.com/maps?saddr=36.654775,-121.800588&daddr=\(lat!),\(lon!)"
+                    }
+
+                }
+            }
+        }
+        let actionSheetController: UIAlertController = UIAlertController(title: "You got an Call!", message: "Hey, you got an Call.", preferredStyle: .alert)
+        let cancelAction: UIAlertAction = UIAlertAction(title: "Navigation", style: .default) { action -> Void in
+            startNavigation(url: url)
+        }
+        actionSheetController.addAction(cancelAction)
+        self.present(actionSheetController, animated: true, completion: nil)
+
+
+    }
+    func startNavigation(url: String){
+        UIApplication.shared.openURL(URL(string:url)!)
+    }
 
 }
 

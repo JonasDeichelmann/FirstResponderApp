@@ -110,7 +110,6 @@ class AEDMapViewController: UIViewController {
 
                         UIApplication.shared.openURL(URL(string:url)!)
                         self.locations.append(urgentPin)
-                        TB.temp("Here I'm")
                     }
 
                 }
