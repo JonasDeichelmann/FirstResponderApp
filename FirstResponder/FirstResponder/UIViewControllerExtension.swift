@@ -1,40 +1,18 @@
 //
-//  Extensions.swift
+//  UIViewControllerExtension.swift
 //  FirstResponder
 //
-//  Created by Ronny Håland on 11/4/17.
+//  Created by Jonas Deichelmann on 26.11.17.
 //  Copyright © 2017 CSUMB. All rights reserved.
 //
 
 import Foundation
-import UIKit
 import Alamofire
 import SwiftyJSON
-
-//MARK: - STRING EXTENSION
-extension String{
-    
-    var length : Int{
-        return self.characters.count
-    }
-    
-    var isUserName:Bool{
-        let s = self
-        if s.characters.count > 5 && s.characters.count < 63 {
-            return true
-        }
-        else {
-            return false
-        }
-    }
-    
-    var isEmail : Bool {
-        return true
-    }
-}
+import UIKit
 
 extension UIViewController{
-    
+
     func checkForInjury(_ key:String, userID:String, completion: @escaping (geopoint?) -> Void) {
         let params:[String: Any] = [
             "key": key,
@@ -57,20 +35,5 @@ extension UIViewController{
                 print("couldn't reach server!")
             }
         }
-    }
-}
-class geopoint{
-    var len:Double
-    var lat:Double
-    
-    init(latitude: Double, longitude: Double) {
-        self.len = longitude
-        self.lat = latitude
-    }
-    func getLongitude() -> Double {
-        return self.len
-    }
-    func getLatitude() -> Double {
-        return self.lat
     }
 }

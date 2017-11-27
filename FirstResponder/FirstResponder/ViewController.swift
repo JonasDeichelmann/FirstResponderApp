@@ -45,7 +45,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
         let loc = locationManager.location
         let parameters: [String: Any] = [
-            "key" : "03afc455-5170-42af-b83e-6b65358c0bea",
+            "key" : "",
             "userID" : 1,
             "coordination":[
                 "latitude" : (loc?.coordinate.latitude)!,
@@ -53,7 +53,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             ],
             "currentDate" : String(describing: Date())
         ]
-        TB.temp("\(parameters)")
         Alamofire.request("http://34.232.174.236/api/smile/", method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseString { response in
                 print(response)

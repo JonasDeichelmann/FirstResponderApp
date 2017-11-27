@@ -12,14 +12,6 @@ import Alamofire
 import TB
 import SwiftyPlistManager
 
-class Annotation: NSObject, MKAnnotation
-{
-    var coordinate: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0)
-    var color: MKPinAnnotationColor = MKPinAnnotationColor.purple
-}
-
-
-
 class AEDMapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     var x : Float?
@@ -46,10 +38,6 @@ class AEDMapViewController: UIViewController {
     var pin8 = CLLocation(latitude:  36.654293, longitude: -121.801766)
     var pin9 = CLLocation(latitude:  36.652636, longitude: -121.796141)
     var pin10 = CLLocation(latitude:  36.655812, longitude: -121.807174)
-//    var pin11 = CLLocation(latitude:  36.654293, longitude: -121.801766)
-//    var pin12 = CLLocation(latitude:  36.654293, longitude: -121.801766)
-
-
 
     func loadToMap(){
 
@@ -62,18 +50,9 @@ class AEDMapViewController: UIViewController {
         self.locations.append(pin8)
         self.locations.append(pin9)
         self.locations.append(pin10)
-//        self.locations.append(pin11)
-//        self.locations.append(pin12)
-
-
-
         mapView.showAnnotations(self.locations as! [MKAnnotation], animated: true)
 
     }
-
-
-
-    // Remove values if the array is too big
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,25 +63,18 @@ class AEDMapViewController: UIViewController {
             lat = 36.654293
             lon = -121.801766
             annotation3.coordinate = CLLocationCoordinate2D(latitude: lat!, longitude:  lon!)
-//            annotation3.color = pinTin
             self.mapView.addAnnotation(annotation3)
         }
-
-
         self.loadToMap()
-
-
-
     }
-
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
     override func viewDidAppear(_ animated: Bool) {
-
-
-
         SwiftyPlistManager.shared.getValue(for: "userID", fromPlistWithName: "Data") { (result, err) in
             if err == nil {
                 if result != nil{
-                    checkForInjury("03afc455-5170-42af-b83e-6b65358c0bea", userID: result as! String) { coords  in
+                    checkForInjury("", userID: result as! String) { coords  in
                         let lat = coords?.getLatitude()
                         let lon = coords?.getLongitude()
                         let urgentPin = CLLocation(latitude: lat!, longitude: lon!)
@@ -115,13 +87,6 @@ class AEDMapViewController: UIViewController {
                 }
             }
         }
-        
-        
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-    }
-    
-    
+
 }

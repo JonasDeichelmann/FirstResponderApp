@@ -9,13 +9,6 @@
 import Foundation
 
 struct AEDPin {
-
     var x: Float!
     var y: Float!
-    
-    
-//    init() {
-//        self.x = 0.0
-//        self.y = 0.0
-//    }
 }

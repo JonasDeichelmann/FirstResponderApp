@@ -8,14 +8,6 @@
 
 import Foundation
 
-struct Info {
-
-    var descript : String?
-    var title : String?
-    var url : String?
-    var text : String?
-
-}
 final class InfoData {
 
     static func generateInfoData() -> [Info] {

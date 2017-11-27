@@ -107,7 +107,7 @@ class callViewController: UITableViewController, CLLocationManagerDelegate{
             userID = "1"
         }
         let parameters: [String: Any] = [
-            "key" : "03afc455-5170-42af-b83e-6b65358c0bea",
+            "key" : "",
             "userID" : userID,
             "coordination":[
                 "latitude" : lat,
@@ -115,7 +115,6 @@ class callViewController: UITableViewController, CLLocationManagerDelegate{
             ],
             "currentDate" : String(describing: Date())
         ]
-        TB.temp("\(parameters)")
         Alamofire.request("http://34.232.174.236/api/update/", method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseString { response in
                 TB.info("\(response)")

@@ -20,7 +20,6 @@ class InfoTableViewController: UITableViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        TB.temp("")
         // Do any additional setup after loading the view, typically from a nib.
 
     }
@@ -43,8 +42,6 @@ class InfoTableViewController: UITableViewController{
                                                  for: indexPath)
         TB.info("\(cell)")
         let info = infoData[indexPath.row]
-        //        cell.titleLbl.text = info.title
-        //        cell.detailLbl.text = info.descript
         cell.textLabel?.text = info.title
         cell.detailTextLabel?.text = info.descript
         url = info.url

@@ -40,7 +40,7 @@ class RegisterUserViewController: UIViewController {
             }
             let token = Singelton.shared.TokenID
             let parameters: [String: Any] = [
-                "key" : "03afc455-5170-42af-b83e-6b65358c0bea",
+                "key" : "",
                 "userdata":[
                     "name" : user,
                     "password": pass,
@@ -56,7 +56,7 @@ class RegisterUserViewController: UIViewController {
                 if response.result.isSuccess {
                     
                     let requestURL = "http://34.232.174.236/api/login/"
-                    let APIKey = "03afc455-5170-42af-b83e-6b65358c0bea"
+                    let APIKey = ""
                     
                     let JSON:[String: Any] = [
                         "key": APIKey,
@@ -95,8 +95,8 @@ class RegisterUserViewController: UIViewController {
         }
     }
     @IBAction func cancel(){
-        
         // TODO: Goto login viewcontroller
+        TB.info("Cancel Button pressed")
     }
     
 }

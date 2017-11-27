@@ -51,7 +51,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
             (granted, error) in
             print("Permission granted: \(granted)")
-            
             guard granted else { return }
             self.getNotificationSettings()
         }
@@ -68,13 +67,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tokenParts = deviceToken.map { data -> String in
             return String(format: "%02.2hhx", data)
         }
-        
         let token = tokenParts.joined()
-        
-        //
         SwiftyPlistManager.shared.getValue(for: "userID", fromPlistWithName: "Data") { (result, err) in
             if err == nil {
-                let key = "03afc455-5170-42af-b83e-6b65358c0bea"
+                let key = ""
                 let uid = result!
                 let params:[String:Any] = [
                     "key": key,
@@ -101,7 +97,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SwiftyPlistManager.shared.getValue(for: "userID", fromPlistWithName: "Data") { (result, err) in
             if err == nil {
                 if result != nil{
-                    checkForInjury("03afc455-5170-42af-b83e-6b65358c0bea", userID: result as! String) { coords  in
+                    checkForInjury("", userID: result as! String) { coords  in
                         let lat = coords?.getLatitude()
                         let lon = coords?.getLongitude()
                         url = "http://maps.apple.com/maps?saddr=36.654775,-121.800588&daddr=\(lat!),\(lon!)"
@@ -116,9 +112,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let alert = UIAlertController(title: "You got an Call!", message: "Hey, you got an Call.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "confirm"), style: .default, handler: {(_ action: UIAlertAction) -> Void in
             self.startNavigation(url: url)
-            // continue your work
-            // important to hide the window after work completed.
-            // this also keeps a reference to the window until the action is invoked.
             topWindow.isHidden = true
         }))
         topWindow.makeKeyAndVisible()
