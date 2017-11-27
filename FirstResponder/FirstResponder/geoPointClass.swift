@@ -11,7 +11,7 @@ import Foundation
 class geopoint{
     var len:Double
     var lat:Double
-
+    
     init(latitude: Double, longitude: Double) {
         self.len = longitude
         self.lat = latitude

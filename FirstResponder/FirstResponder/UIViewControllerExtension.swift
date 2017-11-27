@@ -12,7 +12,7 @@ import SwiftyJSON
 import UIKit
 
 extension UIViewController{
-
+    
     func checkForInjury(_ key:String, userID:String, completion: @escaping (geopoint?) -> Void) {
         let params:[String: Any] = [
             "key": key,

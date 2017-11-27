@@ -13,6 +13,7 @@ class callViewController: UITableViewController, CLLocationManagerDelegate{
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation!
 
+
     let time = ["2 minutes ago", "7 minutes ago"]
     let dateLog = ["11:12PM October 3rd, 2017", "02:30AM January 1st, 2017"]
     
@@ -38,7 +39,7 @@ class callViewController: UITableViewController, CLLocationManagerDelegate{
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-         return mySections[section].title
+        return mySections[section].title
     }
     
 
@@ -48,12 +49,12 @@ class callViewController: UITableViewController, CLLocationManagerDelegate{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellTitle = mySections[indexPath.section][indexPath.row]
-    
+
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "DashboardCell", for: indexPath)
         cell.textLabel?.text = cellTitle
-            return cell
-        }
+        return cell
+    }
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
         case .notDetermined:
@@ -93,7 +94,7 @@ class callViewController: UITableViewController, CLLocationManagerDelegate{
     }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         TB.info("Locations Did Updated")
-            sendLocation(lat: (locations.last?.coordinate.latitude)!, long: (locations.last?.coordinate.longitude)!)
+        sendLocation(lat: (locations.last?.coordinate.latitude)!, long: (locations.last?.coordinate.longitude)!)
     }
     func sendLocation(lat: Double, long: Double){
         var userID = "1"
@@ -134,7 +135,7 @@ struct SectionData {
     subscript(index: Int) -> String {
         return data[index]
     }
-  }
+}
 
 extension SectionData {
     init(title: String, data: [String], subtitle:[String]) {

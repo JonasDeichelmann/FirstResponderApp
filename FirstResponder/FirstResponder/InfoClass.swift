@@ -9,7 +9,7 @@
 import Foundation
 
 final class InfoData {
-
+    
     static func generateInfoData() -> [Info] {
         return [
             Info(descript: "Learn how to do proper CPR", title: "CPR", url: "https://www.youtube.com/watch?v=cosVBV96E2g", text: ""),

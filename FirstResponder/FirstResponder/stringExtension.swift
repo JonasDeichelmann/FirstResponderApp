@@ -9,11 +9,11 @@
 import Foundation
 //MARK: - STRING EXTENSION
 extension String{
-
+    
     var length : Int{
         return self.characters.count
     }
-
+    
     var isUserName:Bool{
         let s = self
         if s.characters.count > 5 && s.characters.count < 63 {

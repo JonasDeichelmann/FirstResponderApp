@@ -18,16 +18,16 @@ class AEDMapViewController: UIViewController {
     var y : Float?
     var name : String?
     var desc : String?
-
+    
     let initialLocation = CLLocation(latitude: 36.654775, longitude: -121.800588)
-
+    
     let regionRadius: CLLocationDistance = 1000
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
                                                                   regionRadius, regionRadius)
         mapView.setRegion(coordinateRegion, animated: true)
     }
-
+    
     var locations = [CLLocation]()
     var pin1 = CLLocation(latitude: 36.654025, longitude: -121.798923)
     var pin2 = CLLocation(latitude: 36.654131, longitude: -121.799873)
@@ -38,9 +38,9 @@ class AEDMapViewController: UIViewController {
     var pin8 = CLLocation(latitude:  36.654293, longitude: -121.801766)
     var pin9 = CLLocation(latitude:  36.652636, longitude: -121.796141)
     var pin10 = CLLocation(latitude:  36.655812, longitude: -121.807174)
-
+    
     func loadToMap(){
-
+        
         self.locations.append(pin1)
         self.locations.append(pin2)
         self.locations.append(pin4)
@@ -51,9 +51,9 @@ class AEDMapViewController: UIViewController {
         self.locations.append(pin9)
         self.locations.append(pin10)
         mapView.showAnnotations(self.locations as! [MKAnnotation], animated: true)
-
+        
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         checkForInjury("", userID: "123123"){ coords in
@@ -79,14 +79,14 @@ class AEDMapViewController: UIViewController {
                         let lon = coords?.getLongitude()
                         let urgentPin = CLLocation(latitude: lat!, longitude: lon!)
                         let url = "http://maps.apple.com/maps?saddr=36.654775,-121.800588&daddr=\(lat!),\(lon!)"
-
+                        
                         UIApplication.shared.openURL(URL(string:url)!)
                         self.locations.append(urgentPin)
                     }
-
+                    
                 }
             }
         }
     }
-
+    
 }

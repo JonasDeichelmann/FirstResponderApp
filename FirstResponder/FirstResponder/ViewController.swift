@@ -57,8 +57,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             .responseString { response in
                 print(response)
         }
-
-
     }
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
