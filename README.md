@@ -1,6 +1,16 @@
 # FirstResponderApp
 ## General Description
+### English
 First Responder enables emergency dispatchers to alert CPR-certified people such as EMTs or Paramedics with locations of accidents nearby. The iOS App also contains a map of nearby AEDs and CPR-Training resources.
+### Norwigan
+First Responder er en app som gjør det mulig for nødsentraler å se om det 
+er sertifiserte personer i nærheten av en ulykke som kan hjelpe mens ambulansen er på vei. 
+Appen inneholder også kart over hjertestartere på utvalgte områder og ressurser for HLR opplæring.
+### German
+First Responder ist ein innovatives und fortschrittliches Konzept um das therapiefreie Intervall bei medizinischen Notfällen zu verringern.
+Die App ist für medizinisches Fachpersonal konzipiert, diese können sich in der App verifizieren und sind dann einsatzbereit.
+Leitstellendisponenten haben nun die Möglichkeit mit einer Desktopanwendung sich anzeigen zu lassen welche Fachkräfte in unmittelbarer umgebung sind.
+Die iOS App enthält ebenfalls eine Karte mit AEDs in der direkten umgebung und Fortbildungsunterlagen.
 ## Services Used
 ### APNS
 We use APNS to send an alert to the CPR-certified people
