@@ -7,7 +7,7 @@ First Responder er en app som gjør det mulig for nødsentraler å se om det
 er sertifiserte personer i nærheten av en ulykke som kan hjelpe mens ambulansen er på vei. 
 Appen inneholder også kart over hjertestartere på utvalgte områder og ressurser for HLR opplæring.
 ### Danish
-First Responder muliggører alarmcentralen at informere certificerede CPR- og paramedicinere om personulykker, der er sket i nærheden. Når en ulykke hænder, kan alarmcentralen sende en notifikation ud til certificerede brugere, der kan og har mulighed for at hjælpe den tilskadekomne inden albulancen når frem. Når de modtager notifikationen, vises ulykkens koordinator samt den hurtigste vej dertil. Appen indeholder også et kort over hjertestartere på udvalgte områder samt en liste over læringsmateriale i blandt andet førstehjælp og hjertemassage.
+First Responder muliggører alarmcentralen at informere certificerede CPR- og paramedicinere om personulykker, der er sket i nærheden. Når en ulykke hænder, kan alarmcentralen sende en notifikation ud til certificerede brugere, der kan og har mulighed for at hjælpe den tilskadekomne inden albulancen når frem. Når de modtager notifikationen, vises ulykkesstedets koordinater samt den hurtigste vej dertil. Appen indeholder også et kort over hjertestartere på udvalgte områder samt en liste over læringsmateriale i blandt andet førstehjælp og hjertemassage.
 ### German
 First Responder ist ein innovatives und fortschrittliches Konzept um das therapiefreie Intervall bei medizinischen Notfällen zu verringern.
 Die App ist für medizinisches Fachpersonal konzipiert, diese können sich in der App verifizieren und sind dann einsatzbereit.
