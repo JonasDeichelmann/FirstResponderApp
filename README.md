@@ -25,3 +25,8 @@ For showing the nearby AEDs on an Map and to navigate the CPR-certified people t
 To handle the Backend requests
 ### TestFlight
 To show and simulate the App on Test devices
+
+## Authors
+[Simon Nielsen](https://github.com/simonmartinnielsen), Web: http://www.soloisyolo.com
+[Ronny Håland](https://github.com/RonHaland)
+[Jonas Deichelmann](https://github.com/JonasDeichelmann), Mail: developing@deichelmann.com, Web: www.Deichelmann.com
