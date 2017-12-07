@@ -1,4 +1,5 @@
 # FirstResponderApp
+![Platform](https://img.shields.io/badge/platform-iOS-blue.svg) ![Language](https://img.shields.io/badge/language-Swift-brightgreen.svg)
 ## General Description
 ### English
 First Responder enables emergency dispatchers to alert CPR-certified people such as EMTs or Paramedics with locations of accidents nearby. The iOS App also contains a map of nearby AEDs and CPR-Training resources.
